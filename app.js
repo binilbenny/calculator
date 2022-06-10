@@ -21,8 +21,6 @@ const plusButton = document.getElementById('plus');
 const equalButton = document.getElementById('equal');
 const backspaceButton = document.getElementById('backspace');
 
-const primaryDisplay = document.querySelector('.primary');
-const secondaryDisplay = document.querySelector('.secondary');
 
 
 
