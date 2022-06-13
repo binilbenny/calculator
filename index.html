@@ -9,34 +9,47 @@
     <title>Calculator</title>
 </head>
 <body>
+    <h1>CALCULATOR</h1>
     <div id="container">
         <div id="display">
             <div class="secondary display"></div>
             <div class="primary display"></div>
         </div>
         <div id="oprations">
-            <button class="number" id="7" value="7">7</button>
-            <button class="number" id="8" value="8">8</button>
-            <button class="number" id="9" value="9">9</button>
-            <button class="number" id="4" value="4">4</button>
-            <button class="number" id="5" value="5">5</button>
-            <button class="number" id="6" value="6">6</button>
-            <button class="number" id="1" value="1">1</button>
-            <button class="number" id="2" value="2">2</button>
-            <button class="number" id="3" value="3">3</button>
-            <button class="number" id="0" value="0">0</button>
-            <button class="dot" id="dot" value=".">.</button>
-            <button class="clear" id="clear" value="C">C</button>
-            <button class="operation" id="divid" value="/">÷</button>
-            <button class="operation" id="multi" value="*">X</button>
-            <button class="operation" id="positveNagative" value="">±</button>
-            <button class="operation" id="squreRoot" value="√">√</button>
-            <button class="operation" id="minus" value="-">-</button>
-            <button class="operation" id="percentage" value="%">%</button>
-            <button class="operation" id="plus" value="+">+</button>
-            <button class="operation" id="equal" value="=">=</button>
-            <button class="operation" id="backspace" value="backspace">⌫</button>
-
+            <div class="firstPart">
+                <button class="number" value="7" onclick="getNumber(value)">7</button>
+                <button class="number" value="8" onclick="getNumber(value)">8</button>
+                <button class="number" value="9" onclick="getNumber(value)">9</button>
+                <button class="number" value="4" onclick="getNumber(value)">4</button>
+                <button class="number" value="5" onclick="getNumber(value)">5</button>
+                <button class="number" value="6" onclick="getNumber(value)">6</button>
+                <button class="number" value="1" onclick="getNumber(value)">1</button>
+                <button class="number" value="2" onclick="getNumber(value)">2</button>
+                <button class="number" value="3" onclick="getNumber(value)">3</button>
+                <button class="dot" value="." onclick="checkDot(value)">.</button>
+                <button class="number" value="0" onclick="getNumber(value)">0</button>
+                <button class="operation" id="positveNagative" onmousedown="plusMinus()">±</button>
+            </div>
+        
+            <div class="secondPart">
+                <div class="operationOne">
+                    <button class="operation" id="divid" value="/" onclick="assignNum(value)">÷</button>
+                    <button class="operation" id="multi" value="*" onclick="assignNum(value)">X</button>
+                    <button class="operation" id="squreRoot" onclick="squreRoot()">√</button>
+                    <button class="operation" id="percentage" value="%" onclick="assignNum(value)">%</button>
+                </div>
+                <div class="operationTwo">
+                    <div>
+                        <button class="clear" id="clear" value="Delete" onclick="clr(value)">C</button>
+                        <button class="operation" id="backspace" value="Backspace" onclick="clr(value)">⌫</button>
+                    </div>
+                    <div>
+                        <button class="operation" id="minus" value="-" onclick="assignNum(value)">-</button>
+                        <button class="operation" id="plus" value="+" onclick="assignNum(value)">+</button>
+                    </div>
+                    <button class="operation" id="equal" onclick="equal()">=</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="app.js"></script>
